@@ -1,6 +1,6 @@
 @font-face {
     font-family: karla;
-    src: url(https://fonts.google.com/specimen/Karla);
+    src: url(fonts/Karla.ttf)
 }
 html{
     font-size: 100%;
