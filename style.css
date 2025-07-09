@@ -2,7 +2,9 @@
     font-family: karla;
     src: url(https://fonts.google.com/specimen/Karla);
 }
-
+html{
+    font-size: 100%;
+}
 body{
     background-color:  hsl(204, 43%, 93%);
     font-size: 16px;
@@ -33,10 +35,11 @@ body{
 .col-6{
     width: 50%;
     height: 100%;
-    background-color: gray;
+    display: flex;
+    flex-direction: column;
 }
 .join-now{
-    padding: 5%;
+    padding: 1rem;
 }
 .join-now h4{
     color: hsl(179, 62%, 43%);
@@ -52,6 +55,7 @@ body{
 .join-now p{
     color: rgba(70, 70, 70, 0.5);
     font-size: 0.8rem;
+    margin-bottom: 0;
 }
 .subscription{
     background-color: hsl(179, 62%, 43%);
@@ -78,10 +82,15 @@ body{
 .text-align-center{
     text-align: center;
 }
+.sign-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 button{
     background-color: hsl(71, 73%, 54%);
     color: white;
-    width: 90%;
+    width: 98%;
     padding: 1rem;
     border-radius: 0.5rem;
     border: none;
@@ -89,8 +98,9 @@ button{
     font-weight: 700;
 }
 .why-us{
-    height:max-content;
-    padding: 5%;
+    padding: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: #54BDBC;
     color: white;
 }
 .why-us h4{
@@ -99,5 +109,53 @@ button{
 }
 .why-us p{
     font-size: 0.8rem;
-    width: 70%;
+    width: 80%;
+    opacity: 0.7;
+}
+
+@media (max-width: 900px){
+    html{
+        font-size: 80%;
+    }
+}
+@media (max-width: 720px){
+    html{
+        font-size: 60%;
+    }
+}
+@media (max-width: 600px){
+    html{
+        font-size: 100%;
+    }
+    .container{
+        height: 50%;
+        width: 100%;
+        margin: 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin-top: 0;
+    }
+    .row{
+        flex-direction: column;
+        width: 90%;
+    }
+    .join-now{
+        width: 100%;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+    .subscription{
+        border-radius: 0%
+    }
+    .why-us{
+        border-radius: 0%;
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+    }
+    .col-6, .col-12{
+        width: 90%;
+    }
+
 }
